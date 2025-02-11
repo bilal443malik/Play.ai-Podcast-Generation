@@ -185,7 +185,7 @@ async def generate_podcast_endpoint(category_request: CategoryRequest):
     
     Example JSON Payload:
     {
-        "category": "Renewables"
+        "category": "Renewables" 
     }
     """
     selected_category = category_request.category
