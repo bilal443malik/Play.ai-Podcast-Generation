@@ -7,13 +7,13 @@ import cloudinary
 import cloudinary.uploader
 import urllib.parse
 import uvicorn
-
+ 
 app = FastAPI(
     title = "We Build Trades, Podcoast Generation | Categories wise Generation",
     description = "This take category from user and fetch all blogs related to it. Make pdf and upload it to cloudinary and inpu the cloudinary url to play.ai to generate podcast",
     version = "1.0.0"
-)
-
+) 
+ 
 import cloudinary.api
 # Configure Cloudinary
 cloudinary.config(
@@ -300,6 +300,3 @@ async def playnote_status(playNoteId: str = Query(..., description="The PlayNote
 
 if __name__ == '__main__':
     uvicorn.run("app:app", host="127.0.0.1", port=8089, reload=True)
-
-
-
